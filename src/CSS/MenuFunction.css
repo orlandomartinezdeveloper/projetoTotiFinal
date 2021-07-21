@@ -1,0 +1,15 @@
+.telaAberta {
+    height:100vh;
+ }
+ 
+ .telaFechada {
+     height:0vh;
+ }
+ 
+ .letrasLigadas {
+     display: block;
+ }
+ 
+ .letrasApagadas {
+     display:none;
+ }

@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.module {
+
+    color: #000;
+}
+
+.titulo {
+    text-align: center;
+    padding: 0.75rem 0;
+}
+
+.cBotoes {
+    display: flex;
+    justify-content: space-around;
+    padding: 0.75rem 0;
+}
+
+.botao {
+    padding: 0.5rem 1rem;
+    border: none;
+    background: #393E46;
+    border-radius: 10px;
+    color:#fff;
+}
+
+.inputConsultar {
+    width: 90%;
+    border: rgb(13, 46, 78) 0.5px solid;
+    padding-left: 15px;
+    height: 40px;
+}
+
+.botao:hover {
+    background:#21094E;
+}
+
+.faSearch {
+    width:10%;
+    background: #393E46;
+    color: #fff;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.busqueda {
+    display: flex;
+    height: 30px;
+    width: 70%;
+}
+
+

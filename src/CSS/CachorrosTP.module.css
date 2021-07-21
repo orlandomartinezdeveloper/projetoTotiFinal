@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.geral {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo {
+    background: #000;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    padding: 0.5rem 0;
+}
+
+.conteudo {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.card {
+    background: rgb(172, 172, 172);
+    margin: 0.5rem;
+    border-radius: 10px;
+    height: 350px;
+    width: 300px;
+    overflow: hidden;
+    padding-bottom: 2rem;
+    cursor: pointer;
+}
+
+.containerImg:hover {
+    opacity:0.5;
+}
+
+.img {
+    width: 300px;
+}
+
+.dados {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nome {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.cidade {
+    font-style: italic;
+    line-height: 0.5rem;
+    font-size: 0.75rem;
+}
+
+@media screen and (min-width: 1200px) {
+    .conteudo {
+        justify-content: space-around;
+    }
+
+    .card {
+        margin: 1rem;
+    }
+}
