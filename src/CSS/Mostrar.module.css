@@ -1,10 +1,8 @@
 body{
-<<<<<<< HEAD
     font-size: 95.5%;
 }
 
 .container{
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -120,126 +118,4 @@ hr{
     .buttonCancelar, .buttonRegistrar{
         width: 20%;
     }
-=======
-  font-size: 95.5%;
-}
-
-.container{
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background: #121111;
-  color: tomato;
-  padding: 5rem 0;
-}
-
-.headerCadastro{
-  display: flex; 
-  justify-content: center; 
-  flex-direction: column;
-  align-items: center;
-  padding: 0rem 0 2rem;
-}
-
-.logo{
-  width: 80%;
-  height: 30%;
-}
-
-.titulo{
-  font-size: 1.4rem;
-  font-weight: 600;
-  padding: 1rem 0 0;
-}
-
-form{
-  width: 80%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.containerForm{
-  width: 100%;
-  display: grid;
-  grid-gap: 0 10px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
-hr{
-  border: dashed 1px #ffffff;
-  width: 100%;
-}
-.containerButtons{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-.buttonCancelar, .buttonRegistrar{
-  margin: 20px 0 0;
-  padding: 0.6rem 2rem;
-  border-radius: 5px;
-  text-decoration: none;
-  text-align: center;
-  width: 100%;
-  cursor: pointer;
-  outline: none;
-  border-style: none;
-  font-weight: 600;
-}
-.buttonCancelar{
-  background-color: tomato;
-  color: #ffffff;
-  border:none;
-  transition: 200ms;
-}
-.buttonCancelar:hover{
-  background-color: #ffffff;
-  color: tomato;
-}
-.buttonRegistrar{
-  background-color: #ffffff;
-  color: tomato;
-  transition: 200ms;
-}
-.buttonRegistrar:hover{
-  background-color: tomato;
-  color: #ffffff;
-}
-
-@media screen and (min-width:1200px){
-  /* .containerForm{
-      width: 80%;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 20px;
-  } */
-
-  .titulo{
-      font-size: 2rem;
-      margin-left: 1rem;
-  }
-  .headerCadastro{
-      flex-direction: row;
-  }
-  .logo{
-      width: 130px;
-      height: 90px;
-  }
-  .container{
-      height: 100vh;
-      padding: 2rem 0;
-  }
-  .containerButtons{
-      justify-content:space-between;
-      flex-direction: row;
-  }
-  .buttonCancelar, .buttonRegistrar{
-      width: 20%;
-  }
->>>>>>> main
 }
