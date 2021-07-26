@@ -4,14 +4,22 @@ import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
 import Cadastro from './Cadastro'
+import Mostrar from './Mostrar'
+import EditarApagar from './EditarApagar'
 const AppRouter = () => {
 
     return (
         <div>
             <Router>
                 <Switch>
-                    <Route path='/Cadastro'>
+                    <Route path='/cadastro'>
                         <Cadastro />
+                    </Route>
+                    <Route path='/mostrarCar'>
+                        <Mostrar />
+                    </Route>
+                    <Route path='/editar'>
+                        <EditarApagar />
                     </Route>
                     <Route path='/Main'>
                         <div>Hola</div>

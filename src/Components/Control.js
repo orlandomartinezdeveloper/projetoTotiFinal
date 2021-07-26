@@ -7,7 +7,7 @@ const Control = () => {
     return (
         <div className={ControlCSS.module}>
             <div className={ControlCSS.cBotoes}>
-                <button className={ControlCSS.botao} > <Link to="/Cadastro">Novo Animal</Link></button>
+                <button className={ControlCSS.botao} > <Link to="/cadastro">Novo Animal</Link></button>
                 <div className={ControlCSS.busqueda}>
                     <div className="input-group mb-3" />
                     <input type="text" className="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2" />

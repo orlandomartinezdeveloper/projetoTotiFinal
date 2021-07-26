@@ -1,0 +1,74 @@
+.modal{
+    position: fixed;
+    background-color: rgba(8, 8, 8, 0.733);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteudoModal{
+    width: 90%;
+    height: 47%;
+    padding: 2rem 0;
+    background: rgb(48 48 42);
+    color: tomato;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.menssagem{
+    color: #ffffff;
+    font-size: 1.1rem;
+    text-align: center;
+    width: 68%;
+}
+.containerButtons{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.buttonCancelar, .buttonRegistrar{
+    margin: 20px 0 0;
+    padding: 0.6rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    width: 80%;
+    cursor: pointer;
+    outline: none;
+    border-style: none;
+    font-weight: 600;
+}
+.buttonCancelar{
+    background-color: tomato;
+    color: #ffffff;
+    border:none;
+    transition: 200ms;
+}
+.buttonCancelar:hover{
+    background-color: #ffffff;
+    color: tomato;
+}
+.buttonRegistrar{
+    background-color: #ffffff;
+    color: tomato;
+    transition: 200ms;
+}
+.buttonRegistrar:hover{
+    background-color: tomato;
+    color: #ffffff;
+}
+
+@media screen and (min-width:600px){
+    .conteudoModal{
+        width: 45%;
+    }
+}
