@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Logo from '../Img/logo-huella-peq.png'
+import Logo from '../Img/logo-car-finder.png'
 import HeaderCSS from '../CSS/Header.module.css';
 import '../CSS/MenuFunction.css';
 const Header = () => {
@@ -48,9 +48,9 @@ const Header = () => {
         },
         {
             id: 1,
-            name: 'Animais',
-            src: '/Animais',
-            logo: 'fas fa-paw'
+            name: 'Veículos',
+            src: '/Veiculos',
+            logo: 'fas fa-car'
         },
         {
             id: 2,
@@ -70,8 +70,8 @@ const Header = () => {
         <Fragment>
             <header>
                 <nav>
-                    <div><img src={Logo} alt="Logo AnimaDopt" className={HeaderCSS.imgMenu} /></div>
-                    <div><div className={HeaderCSS.textTitulo}>AnimaDopt</div><div className={HeaderCSS.subTitulo}>Animais de Estimação</div></div>
+                    <div><img src={Logo} alt="Logo Car Finder" className={HeaderCSS.imgMenu} /></div>
+                    <div><div className={HeaderCSS.textTitulo}>CAR_FINDER()</div><div className={HeaderCSS.subTitulo}>Catálogo de Veículos</div></div>
 
                     <i className={"fas fa-bars " + HeaderCSS.faBars} onClick={abreFecha}></i>
                     <ul className={telaAzul}>
