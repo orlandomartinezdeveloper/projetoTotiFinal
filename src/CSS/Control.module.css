@@ -22,7 +22,7 @@
 .botao {
     padding: 0.5rem 1rem;
     border: none;
-    background: #393E46;
+    background: #000;
     border-radius: 10px;
     color:#fff;
 }
@@ -35,7 +35,7 @@
 }
 
 .botao:hover {
-    background:#21094E;
+    background: #ff6347;
 }
 
 .faSearch {

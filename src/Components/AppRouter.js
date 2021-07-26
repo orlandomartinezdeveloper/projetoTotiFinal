@@ -3,9 +3,10 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
-import Cadastro from './Cadastro'
-import Mostrar from './Mostrar'
-import EditarApagar from './EditarApagar'
+import Cadastro from './Cadastro';
+import Mostrar from './Mostrar';
+import EditarApagar from './EditarApagar';
+import CarrosTP from './CarrosTP';
 const AppRouter = () => {
 
     return (
@@ -27,6 +28,7 @@ const AppRouter = () => {
                     <Route exact path='/'>
                         <Header />
                         <Main />
+                        <CarrosTP />
                         <Footer />
                     </Route>
                 </Switch>
