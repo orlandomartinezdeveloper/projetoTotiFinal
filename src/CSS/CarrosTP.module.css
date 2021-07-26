@@ -27,14 +27,15 @@
 }
 
 .card {
-    background: rgb(172, 172, 172);
+    background: rgb(144, 33, 13);;
     margin: 0.5rem;
     border-radius: 10px;
-    height: 350px;
+    height: 250px;
     width: 300px;
     overflow: hidden;
     padding-bottom: 2rem;
     cursor: pointer;
+    color: #fff;
 }
 
 .containerImg:hover {
@@ -51,11 +52,21 @@
     align-items: center;
 }
 
-.nome {
+.marca {
     font-weight: bold;
     font-size: 1.2rem;
 }
 
+.modelo {
+    line-height: 1rem;
+    font-size: 1rem;
+}
+
+.preco {
+    line-height: 1rem;
+    font-size: 1rem;
+    font-weight: bold; 
+}
 .cidade {
     font-style: italic;
     line-height: 0.5rem;
