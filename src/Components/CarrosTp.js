@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import CarrosTPCSS from '../CSS/CarrosTP.module.css';
-import CarregandoFoto from '../Img/carregandoFoto.jpg';
-const CarrosTP = () => {
+const CarrosTp = () => {
     const [cars, setCars] = useState([])
     useEffect(() => {
         getCarros()
@@ -21,24 +20,26 @@ const CarrosTP = () => {
 
     return (
         <div className={CarrosTPCSS.conteudo}>
-            {cars.map((item) => {
-                let imagesCar = [];
-                imagesCar.push(item.urlFotoPrincipal)
-
-                return (
-                    < div className={CarrosTPCSS.card} >
-                        <div className={CarrosTPCSS.containerImg}><img src={imagesCar} alt="Imagem" className={CarrosTPCSS.img} /></div>
-                        <div className={CarrosTPCSS.dados}>
-                            <div className={CarrosTPCSS.marca}>{item.marca}</div>
-                            <div className={CarrosTPCSS.modelo}>{item.modelo}</div>
-                            <div className={CarrosTPCSS.preco}>R$ {item.preco}</div>
-                            <div className={CarrosTPCSS.modelo}>{item.cidade}</div>
-                        </div>
-                    </div >
-                )
-            })}
+            <div className={CarrosTPCSS.preCards}>
+                {cars.map((item) => {
+                    let imagesCar = [];
+                    imagesCar.push(item.urlFotoPrincipal)
+                    return (
+                        < div className={CarrosTPCSS.card} >
+                            <div className={CarrosTPCSS.containerImg}><img src={imagesCar} alt="Imagem" className={CarrosTPCSS.img} /></div>
+                            <div className={CarrosTPCSS.dados}>
+                                <div className={CarrosTPCSS.marca}>{item.marca}</div>
+                                <div className={CarrosTPCSS.modelo}>{item.modelo}</div>
+                                <div className={CarrosTPCSS.preco}>R$ {item.preco}</div>
+                                <div className={CarrosTPCSS.modelo}>{item.cidade}</div>
+                                <button className={CarrosTPCSS.button}>Ver</button>
+                            </div>
+                        </div >
+                    )
+                })}
+            </div>
         </div >
     )
 }
 
-export default CarrosTP;
+export default CarrosTp;

@@ -6,7 +6,7 @@ import Footer from './Footer';
 import Cadastro from './Cadastro';
 import Mostrar from './Mostrar';
 import EditarApagar from './EditarApagar';
-import CarrosTP from './CarrosTP';
+import CarrosTp from './CarrosTp.js';
 const AppRouter = () => {
 
     return (
@@ -28,7 +28,7 @@ const AppRouter = () => {
                     <Route exact path='/'>
                         <Header />
                         <Main />
-                        <CarrosTP />
+                        <CarrosTp />
                         <Footer />
                     </Route>
                 </Switch>

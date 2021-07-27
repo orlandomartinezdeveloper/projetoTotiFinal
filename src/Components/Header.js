@@ -70,9 +70,10 @@ const Header = () => {
         <Fragment>
             <header>
                 <nav>
-                    <div><img src={Logo} alt="Logo Car Finder" className={HeaderCSS.imgMenu} /></div>
-                    <div><div className={HeaderCSS.textTitulo}>CAR_FINDER()</div><div className={HeaderCSS.subTitulo}>Catálogo de Veículos</div></div>
-
+                    <div className={HeaderCSS.logoG}>
+                        <div><img src={Logo} alt="Logo Car Finder" className={HeaderCSS.imgMenu} /></div>
+                        <div><div className={HeaderCSS.textTitulo}>CAR_FINDER()</div><div className={HeaderCSS.subTitulo}>Catálogo de Veículos</div></div>
+                    </div>
                     <i className={"fas fa-bars " + HeaderCSS.faBars} onClick={abreFecha}></i>
                     <ul className={telaAzul}>
                         {

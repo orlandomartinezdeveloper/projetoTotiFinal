@@ -2,14 +2,14 @@ import React, { Fragment } from 'react';
 import MainCSS from '../CSS/Main.module.css';
 import Carousel from '../Components/Carousel.js';
 import Control from '../Components/Control.js';
-import CarrosTP from './CarrosTP.js';
+import CarrosTp from './CarrosTp.js';
 const Main = () => {
     return (
         <Fragment>
             <div className={MainCSS.geral}>
                 <Carousel />
                 <Control />
-                <CarrosTP />
+                <CarrosTp />
             </div>
         </Fragment>
     )
