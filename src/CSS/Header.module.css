@@ -36,6 +36,7 @@ nav {
     margin-right: 2rem;
     cursor:pointer;
     display:block;
+    font-size: 2rem;
 }
 
 nav > ul {
@@ -74,7 +75,7 @@ nav > ul {
 }
 
 .listado > a:hover {
-    color: #eaf868;
+    color: #ff6347;
     text-decoration: underline;
 }
 

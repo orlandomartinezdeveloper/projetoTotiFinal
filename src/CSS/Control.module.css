@@ -4,7 +4,7 @@
 }
 
 .module {
-    background: #d86057;
+    background: linear-gradient(to bottom, #ff6347, rgb(138, 33, 33));
     color: #000;
 }
 
@@ -35,7 +35,8 @@
 }
 
 .botao:hover {
-    background: #bc405c;
+    background: rgb(189, 7, 7);
+    box-shadow: 0 0 10px rgb(165, 39, 17), 0 0 20px rgb(165, 39, 17), 0 0 30px rgb(165, 39, 17);
 }
 
 .faSearch {

@@ -32,7 +32,7 @@ const CarrosTp = () => {
                                 <div className={CarrosTPCSS.modelo}>{item.modelo}</div>
                                 <div className={CarrosTPCSS.preco}>R$ {item.preco}</div>
                                 <div className={CarrosTPCSS.modelo}>{item.cidade}</div>
-                                <button className={CarrosTPCSS.button}>Ver</button>
+                                <div className={CarrosTPCSS.preButton}><button className={CarrosTPCSS.button}><i className="fa fa-search"></i></button></div>
                             </div>
                         </div >
                     )
