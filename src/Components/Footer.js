@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <Fragment>
             <div className={FooterCSS.geral}>
-                <img src={LogoToti} alt="Logo da Toti" class={FooterCSS.logoToti} />
+                <img src={LogoToti} alt="Logo da Toti" className={FooterCSS.logoToti} />
                 <p className={FooterCSS.textFooter}>APP feito pelos estudantes da Turma 8</p>
                 <p className={FooterCSS.textFooter}>para o Projeto Final de Desenvolvedor</p>
                 <p className={FooterCSS.textFooter}>FullStack MERN</p>
