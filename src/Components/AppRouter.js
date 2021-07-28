@@ -8,7 +8,6 @@ import Mostrar from './Mostrar';
 import EditarApagar from './EditarApagar';
 import CarrosTp from './CarrosTp.js';
 const AppRouter = () => {
-
     return (
         <div>
             <Router>

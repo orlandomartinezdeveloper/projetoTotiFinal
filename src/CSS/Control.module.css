@@ -15,23 +15,33 @@
 
 .cBotoes {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
+    align-items: center;
     padding: 0.75rem 0;
+    width: 85%;
+    margin: 0 auto;
+
+}
+
+.busqueda {
+    display: flex;
+    padding-left: 1rem;
+    width: 100%;
+}
+
+.lupa {
+    margin-left: -1.5rem;
+    margin-top: 0.25rem;
 }
 
 .botao {
-    padding: 0.5rem 1rem;
+    padding: 0.25rem 1rem;
     border: none;
     background: #000;
     border-radius: 10px;
     color:#fff;
-}
-
-.inputConsultar {
-    width: 90%;
-    border: rgb(13, 46, 78) 0.5px solid;
-    padding-left: 15px;
-    height: 40px;
+    border: 2px #eb1212 solid;
+    width:100%;
 }
 
 .botao:hover {
@@ -39,20 +49,19 @@
     box-shadow: 0 0 10px rgb(165, 39, 17), 0 0 20px rgb(165, 39, 17), 0 0 30px rgb(165, 39, 17);
 }
 
-.faSearch {
-    width:10%;
-    background: #393E46;
-    color: #fff;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.inputGrand {
+    border: none;
+    width: 100%;
+    height: 1.75rem;
+    padding: 0 1rem;
+    border-radius: 10px;    
 }
 
-.busqueda {
-    display: flex;
-    height: 30px;
-    width: 70%;
+.inputGrand:hover, .inputGrand:focus {
+    outline: none;
+    border: 1px solid #eb1212;
+
 }
+
 
 

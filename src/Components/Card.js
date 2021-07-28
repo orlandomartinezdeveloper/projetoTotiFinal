@@ -1,6 +1,5 @@
 import CarrosTPCSS from '../CSS/CarrosTP.module.css';
-
-function Card ({ item }) {
+function Card({ item }) {
     const { _id, urlFotoPrincipal, marca, modelo, preco, cidade } = item;
     let imagesCar = [];
     imagesCar.push(urlFotoPrincipal);
@@ -15,7 +14,6 @@ function Card ({ item }) {
                 <div className={CarrosTPCSS.preButton}><a href={`/mostrarCar/${_id}`}><button className={CarrosTPCSS.button}><i className="fa fa-eye"></i></button></a></div>
             </div>
         </div >
-)
+    )
 }
-
 export default Card;
