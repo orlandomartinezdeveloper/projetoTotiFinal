@@ -16,7 +16,7 @@ const AppRouter = () => {
                     <Route path='/cadastro'>
                         <Cadastro />
                     </Route>
-                    <Route path='/mostrarCar'>
+                    <Route path='/mostrarCar/:id'>
                         <Mostrar />
                     </Route>
                     <Route path='/editar'>
