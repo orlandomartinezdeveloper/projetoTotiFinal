@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ControlCSS from '../CSS/Control.module.css';
 import { Link } from 'react-router-dom';
 // import Cadastro from './Cadastro'
 const Control = (props) => {
     const handleSearch = props.handleSearch;
-    const [busca, setBusca] = useState('')
+    const [busca, setBusca] = useState('');
+    const passText = () => {
+        handleSearch(busca);
+    };
+    useEffect(passText, [busca, handleSearch])
     return (
         <div className={ControlCSS.module}>
             <div className={ControlCSS.cBotoes}>
@@ -14,8 +18,7 @@ const Control = (props) => {
                         value={busca}
                         onChange={
                             (event) => {
-                                setBusca(event.target.value)
-                                handleSearch(busca);
+                                setBusca(event.target.value);
                             }
 
                         }
