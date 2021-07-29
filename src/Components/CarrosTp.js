@@ -4,22 +4,24 @@ import CarrosTPCSS from '../CSS/CarrosTP.module.css';
 import ReactPaginate from 'react-paginate';
 const CarrosTp = (props) => {
     const busca = props.busca;
-    console.log(busca)
+    console.log('Buscando: <' + busca + '>')
     const [cars, setCars] = useState([])
-    useEffect(() => {
-        getCarros()
-    }, []);
     const getCarros = () => {
-        fetch('https://carfinder-toti.herokuapp.com/cars', {
+        console.log('Espere...')
+        const urlBase = 'https://carfinder-toti.herokuapp.com/cars';
+        const endpoint = `${urlBase}?q=${busca}`;
+        fetch(endpoint, {
             method: 'GET'
         })
             .then(function (response) {
                 return response.json()
             })
             .then(function (data) {
+                console.log('Pronto!!')
                 setCars(data)
             })
     }
+    useEffect(getCarros, [busca]);
     const [pageNumber, setPageNumber] = useState(0);
     const carsPerPage = 8;
     const carsVisited = pageNumber * carsPerPage;
@@ -39,8 +41,8 @@ const CarrosTp = (props) => {
             </div>
             <div className={CarrosTPCSS.barraNavega}>
                 <ReactPaginate
-                    previousLabel={<i class="fas fa-arrow-left"></i>}
-                    nextLabel={<i class="fas fa-arrow-right"></i>}
+                    previousLabel={<i className="fas fa-arrow-left"></i>}
+                    nextLabel={<i className="fas fa-arrow-right"></i>}
                     pageCount={pageCount}
                     onPageChange={changePage}
                     containerClassName={CarrosTPCSS.paginacaoButtons}
