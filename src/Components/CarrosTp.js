@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react';
 import Card from './Card';
 import CarrosTPCSS from '../CSS/CarrosTP.module.css';
 import ReactPaginate from 'react-paginate';
-const CarrosTp = () => {
+const CarrosTp = (props) => {
+    const busca = props.busca;
+    console.log(busca)
     const [cars, setCars] = useState([])
     useEffect(() => {
         getCarros()
@@ -26,6 +28,7 @@ const CarrosTp = () => {
     const changePage = ({ selected }) => {
         setPageNumber(selected)
     }
+
     const Map = carSlice.map(item => (<Card item={item} key={item._id} />));
 
 
@@ -33,21 +36,20 @@ const CarrosTp = () => {
         <div className={CarrosTPCSS.conteudo}>
             <div className={CarrosTPCSS.preCards}>
                 {Map}
-                <div className={CarrosTPCSS.barraNavega}>
-                    <ReactPaginate
-                        previousLabel={<i class="fas fa-arrow-left"></i>}
-                        nextLabel={<i class="fas fa-arrow-right"></i>}
-                        pageCount={pageCount}
-                        onPageChange={changePage}
-                        containerClassName={CarrosTPCSS.paginacaoButtons}
-                        previousLinkClassName={CarrosTPCSS.previousNext}
-                        nextLinkClassName={CarrosTPCSS.previousNext}
-                        disabledClassName={"paginationDisabled"}
-                        activeClassName={CarrosTPCSS.paginacaoActive}
-                    />
-                </div>
             </div>
-
+            <div className={CarrosTPCSS.barraNavega}>
+                <ReactPaginate
+                    previousLabel={<i class="fas fa-arrow-left"></i>}
+                    nextLabel={<i class="fas fa-arrow-right"></i>}
+                    pageCount={pageCount}
+                    onPageChange={changePage}
+                    containerClassName={CarrosTPCSS.paginacaoButtons}
+                    previousLinkClassName={CarrosTPCSS.previousNext}
+                    nextLinkClassName={CarrosTPCSS.previousNext}
+                    disabledClassName={"paginationDisabled"}
+                    activeClassName={CarrosTPCSS.paginacaoActive}
+                />
+            </div>
         </div >
     )
 }

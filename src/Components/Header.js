@@ -69,19 +69,22 @@ const Header = () => {
     return (
         <Fragment>
             <header>
-                <nav>
-                    <div className={HeaderCSS.logoG}>
-                        <div><img src={Logo} alt="Logo Car Finder" className={HeaderCSS.imgMenu} /></div>
-                        <div><div className={HeaderCSS.textTitulo}>CAR_FINDER()</div><div className={HeaderCSS.subTitulo}>Catálogo de Veículos</div></div>
-                    </div>
-                    <i className={"fas fa-bars " + HeaderCSS.faBars} onClick={abreFecha}></i>
-                    <ul className={telaAzul}>
-                        {
-                            navMenu.map((item) =>
-                                <li key={item.id} className={HeaderCSS.listado}><Link to={item.src} className={telaLetras} onClick={Linked}><i className={item.logo} style={{ marginRight: '10px' }}></i>{item.name}</Link></li>)
-                        }
-                    </ul>
-                </nav>
+                <div className={HeaderCSS.navP}>
+                    <nav className={HeaderCSS.nav}>
+
+                        <div className={HeaderCSS.logoG}>
+                            <div><img src={Logo} alt="Logo Car Finder" className={HeaderCSS.imgMenu} /></div>
+                            <div><div className={HeaderCSS.textTitulo}>CAR_FINDER()</div><div className={HeaderCSS.subTitulo}>Catálogo de Veículos</div></div>
+                        </div>
+                        <i className={"fas fa-bars " + HeaderCSS.faBars} onClick={abreFecha}></i>
+                        <ul className={telaAzul}>
+                            {
+                                navMenu.map((item) =>
+                                    <li key={item.id} className={HeaderCSS.listado}><Link to={item.src} className={telaLetras} onClick={Linked}><i className={item.logo} style={{ marginRight: '10px' }}></i>{item.name}</Link></li>)
+                            }
+                        </ul>
+                    </nav>
+                </div>
             </header>
 
         </Fragment >

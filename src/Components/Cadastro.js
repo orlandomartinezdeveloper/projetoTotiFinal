@@ -20,6 +20,7 @@ const Cadastro = () => {
   const [mostrarModal, setMostrarModal] = useState(false)
   const [menssagemModal, setMenssagemModal] = useState('')
   const [bottonModal, setBottonModal] = useState('')
+  //const [buttonCad, setButtonCad] = useState(true)
 
   const limpiarCampos = () => {
     setUrlFotoPrincipal("")
@@ -92,6 +93,9 @@ const Cadastro = () => {
   const fecharModal = () => {
     setMostrarModal(false)
   }
+
+  //const buttonActive = buttonCad;
+
   return (
     <div>
       <div className={CadastroCss.container}>

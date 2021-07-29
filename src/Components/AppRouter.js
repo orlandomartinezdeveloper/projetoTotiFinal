@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from './Header';
 import Main from './Main';
@@ -6,8 +6,14 @@ import Footer from './Footer';
 import Cadastro from './Cadastro';
 import Mostrar from './Mostrar';
 import EditarApagar from './EditarApagar';
-import CarrosTp from './CarrosTp.js';
+import CarrosTp from './CarrosTp';
+
 const AppRouter = () => {
+    const [busca, setBusca] = useState('');
+    const handleSearch = (captura) => {
+        setBusca(captura)
+    }
+
     return (
         <div>
             <Router>
@@ -26,8 +32,8 @@ const AppRouter = () => {
                     </Route>
                     <Route exact path='/'>
                         <Header />
-                        <Main />
-                        <CarrosTp />
+                        <Main handleSearch={handleSearch} />
+                        <CarrosTp busca={busca} />
                         <Footer />
                     </Route>
                 </Switch>
