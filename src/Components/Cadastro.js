@@ -20,7 +20,7 @@ const Cadastro = () => {
   const [mostrarModal, setMostrarModal] = useState(false)
   const [menssagemModal, setMenssagemModal] = useState('')
   const [bottonModal, setBottonModal] = useState('')
-  //const [buttonCad, setButtonCad] = useState(true)
+  const [bottonAtivo, setBottonAtivo] = useState(true)
 
   const limpiarCampos = () => {
     setUrlFotoPrincipal("")
@@ -44,6 +44,8 @@ const Cadastro = () => {
     if (!urlFotoPrincipal && !cidade && !uf && !contato && !descricao && !contato && !marca && !modelo && !cor && !ano && !combustivel && !transmissao && !preco && !cadastradoPor) {
       return console.error('Campos obrigatórios!')
     }
+
+    setBottonAtivo(false)
 
     const data = {
       urlFotoPrincipal,
@@ -79,13 +81,14 @@ const Cadastro = () => {
         setMenssagemModal('Veículo registrado satistactoriamente')
         setBottonModal('Cadastrar outro veículo')
         setMostrarModal(true)
+        setBottonAtivo(true)
         console.log(data)
       })
       .catch(error => {
         setMenssagemModal(`Veículo nao registrado
              ${error}`)
         setBottonModal('Tentar novamente')
-        setMostrarModal(true)
+        setMostrarModal(false)
         console.log(error)
       })
   }
@@ -93,8 +96,6 @@ const Cadastro = () => {
   const fecharModal = () => {
     setMostrarModal(false)
   }
-
-  //const buttonActive = buttonCad;
 
   return (
     <div>
@@ -161,8 +162,8 @@ const Cadastro = () => {
           </div>
           <hr />
           <div className={CadastroCss.containerButtons}>
-            <button type="submit" className={CadastroCss.buttonRegistrar}>Cadastrar</button>
-            <Link to="/" className={CadastroCss.buttonCancelar}>Cancelar</Link>
+          {bottonAtivo && <button type="submit" className={CadastroCss.buttonRegistrar}>Cadastrar</button>}
+          {bottonAtivo &&  <Link to="/" className={CadastroCss.buttonCancelar}>Cancelar</Link>}
           </div>
         </form>
       </div>
