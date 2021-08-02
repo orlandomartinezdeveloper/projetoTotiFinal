@@ -191,7 +191,7 @@ const Mostrar = () => {
         { menssagemRegistro && <div><p>Modificando o regitro do veículo...</p></div>}
       </form>
       </div>
-      { mostrarModal && <Modal fecharModal={ fecharModal } menssagemModal={ menssagemModal } bottonModal={ bottonModal } /> }
+      { mostrarModal && <Modal fecharModal={ fecharModal } menssagemModal={ menssagemModal } bottonModal={ bottonModal } id={id} /> }
     </div> 
   )
 }
