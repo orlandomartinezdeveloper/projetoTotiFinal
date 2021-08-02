@@ -21,6 +21,7 @@ const Cadastro = () => {
   const [menssagemModal, setMenssagemModal] = useState('')
   const [bottonModal, setBottonModal] = useState('')
   const [bottonAtivo, setBottonAtivo] = useState(true)
+  const [menssagemRegistro, setMenssagemRegistro] = useState(false)
 
   const limpiarCampos = () => {
     setUrlFotoPrincipal("")
@@ -46,6 +47,7 @@ const Cadastro = () => {
     }
 
     setBottonAtivo(false)
+    setMenssagemRegistro(true)
 
     const data = {
       urlFotoPrincipal,
@@ -82,6 +84,7 @@ const Cadastro = () => {
         setBottonModal('Cadastrar outro veículo')
         setMostrarModal(true)
         setBottonAtivo(true)
+        setMenssagemRegistro(false)
         console.log(data)
       })
       .catch(error => {
@@ -165,6 +168,7 @@ const Cadastro = () => {
           {bottonAtivo && <button type="submit" className={CadastroCss.buttonRegistrar}>Cadastrar</button>}
           {bottonAtivo &&  <Link to="/" className={CadastroCss.buttonCancelar}>Cancelar</Link>}
           </div>
+          { menssagemRegistro && <div><p>Registrando o veículo...</p></div>}
         </form>
       </div>
       {mostrarModal && <Modal fecharModal={fecharModal} menssagemModal={menssagemModal} bottonModal={bottonModal} />}

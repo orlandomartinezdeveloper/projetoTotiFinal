@@ -9,7 +9,7 @@ const Header = () => {
     const [telaLetras, setTelaLetras] = useState('letrasApagadas');
     const [resolucion, setResolucion] = useState(window.innerWidth);
     useEffect(() => {
-        if (resolucion >= 1200) {
+        if (resolucion >= 1000) {
             setTelaLetras('letrasLigadas');
         } else {
             setTelaLetras('letrasApagadas');
