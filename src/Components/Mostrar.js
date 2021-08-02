@@ -85,27 +85,27 @@ const Mostrar = () => {
 
   useEffect(obtenerCar, [ id ])
 
-  // const deleteCar = (id) => {
-  //   fetch(`${endPoint}/${id}`, {
-  //     method: 'DELETE'
-  //   })
-  //   .then(response => response.json())
-  //   .then(data => {
-  //     // setidDelete(id)
-  //     setMenssagemModal('Veículo apagado satistactoriamente')
-  //     setBottonModal('desactivar este botton')
-  //     setMostrarModal(true)
-  //     console.log('deletado con sucesso')
-  //     console.log(data)
-  //   })
-  //   .catch(function (error) {
-  //     setMenssagemModal(`Veículo nao Apagado
-  //            ${error}`)
-  //     setBottonModal('Tentar novamente')
-  //     setMostrarModal(false)
-  //     console.log(error)
-  //   });  
-  // } 
+  const deleteCar = (id) => {
+    fetch(`${endPoint}/${id}`, {
+      method: 'DELETE'
+    })
+    .then(response => response.text())
+    .then(data => {
+      // setidDelete(id)
+      setMenssagemModal('Veículo apagado satistactoriamente')
+      setBottonModal('desactivar este botton')
+      setMostrarModal(true)
+      console.log('deletado con sucesso')
+      console.log(data)
+    })
+    .catch(function (error) {
+      setMenssagemModal(`Veículo nao Apagado
+             ${error}`)
+      setBottonModal('Tentar novamente')
+      setMostrarModal(false)
+      console.log(error)
+    });  
+  } 
 
   const desactBotton = () => {
     setEdit(false)
@@ -185,11 +185,12 @@ const Mostrar = () => {
         <div className={ MostrarCss.containerButtons }>
           { guardar && <button type="submit" className={ MostrarCss.buttonRegistrar } >Guardar cambios</button> }
           { edit && <button className={ MostrarCss.buttonRegistrar } onClick={ desactBotton }>Editar</button> }
-          { deletar && <button className={ MostrarCss.buttonRegistrar }>Deletar</button> }
           { bottonAtivo && <Link to="/" className={ MostrarCss.buttonCancelar } onClick={ desactBotton }>Cancelar</Link> }
         </div>
         { menssagemRegistro && <div><p>Modificando o regitro do veículo...</p></div>}
       </form>
+      { deletar && <button onClick={ () => {deleteCar(id)} } className={ MostrarCss.buttonRegistrar }>Deletar</button> }
+
       </div>
       { mostrarModal && <Modal fecharModal={ fecharModal } menssagemModal={ menssagemModal } bottonModal={ bottonModal } id={id} /> }
     </div> 
