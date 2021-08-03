@@ -70,6 +70,9 @@ hr{
     font-weight: 600;
 }
 .buttonCancelar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: tomato;
     color: #ffffff;
     border:none;
@@ -80,6 +83,9 @@ hr{
     color: tomato;
 }
 .buttonRegistrar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #ffffff;
     color: tomato;
     transition: 200ms;
@@ -87,6 +93,21 @@ hr{
 .buttonRegistrar:hover{
     background-color: tomato;
     color: #ffffff;
+}
+
+i{
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.mensagemEspera{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mensagemEspera p{
+    margin: 0;
 }
 
 @media screen and (min-width:1200px){

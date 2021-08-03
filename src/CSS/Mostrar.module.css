@@ -3,6 +3,7 @@ body{
 }
 
 .container{
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -50,6 +51,7 @@ form{
 hr{
     border: dashed 1px #ffffff;
     width: 100%;
+    margin: 0.5rem 0 0.5rem;
 }
 .containerButtons{
     width: 100%;
@@ -57,7 +59,7 @@ hr{
     justify-content: center;
     flex-direction: column;
 }
-.buttonCancelar, .buttonRegistrar{
+.buttonCancelar, .buttonRegistrar, .buttonDeletar{
     margin: 20px 0 0;
     padding: 0.6rem 2rem;
     border-radius: 5px;
@@ -69,17 +71,23 @@ hr{
     border-style: none;
     font-weight: 600;
 }
-.buttonCancelar{
+.buttonCancelar, .buttonDeletar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: tomato;
     color: #ffffff;
     border:none;
     transition: 200ms;
 }
-.buttonCancelar:hover{
+.buttonCancelar:hover, .buttonDeletar:hover{
     background-color: #ffffff;
     color: tomato;
 }
 .buttonRegistrar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #ffffff;
     color: tomato;
     transition: 200ms;
@@ -89,7 +97,16 @@ hr{
     color: #ffffff;
 }
 
-@media screen and (min-width:1200px){
+.buttonDeletar{
+    position: absolute;
+}
+
+i{
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+@media screen and (min-width:900px){
     /* .containerForm{
         width: 80%;
         display: grid;
@@ -117,7 +134,12 @@ hr{
         justify-content:space-between;
         flex-direction: row;
     }
-    .buttonCancelar, .buttonRegistrar{
-        width: 20%;
+    .buttonCancelar, .buttonRegistrar, .buttonDeletar{
+        width: 27%;
+        margin-top: 0;
+    }
+
+    .buttonDeletar{
+        top: 92vh;
     }
 }
