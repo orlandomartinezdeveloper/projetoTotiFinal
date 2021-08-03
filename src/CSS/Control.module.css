@@ -64,7 +64,7 @@
 
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1000px) {
     .cBotoes {
         width: 80%;
         justify-content: space-between;
@@ -79,7 +79,7 @@
     }
 
     .botao {
-        font-size: 2rem;
+        font-size: 1.2rem;
     }
 }
 

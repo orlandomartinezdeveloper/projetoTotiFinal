@@ -99,7 +99,7 @@ nav > ul {
     align-items: center;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1000px) {
     .navP {
         width: 100%;
         background: rgb(1, 10, 19);
