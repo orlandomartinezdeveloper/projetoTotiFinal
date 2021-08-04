@@ -101,7 +101,7 @@ const Cadastro = () => {
   }
 
   return (
-    <div>
+    <div className={CadastroCss.preContainer}>
       <div className={CadastroCss.container}>
         <div className={CadastroCss.headerCadastro}>
           <img className={CadastroCss.logo} src={logo} alt="logo" />
@@ -165,10 +165,10 @@ const Cadastro = () => {
           </div>
           <hr />
           <div className={CadastroCss.containerButtons}>
-          {bottonAtivo && <button type="submit" className={CadastroCss.buttonRegistrar}> <i class="far fa-save" />Cadastrar</button>}
-          {bottonAtivo &&  <Link to="/" className={CadastroCss.buttonCancelar}> <i class="far fa-times-circle" />Cancelar</Link>}
+          {bottonAtivo && <button type="submit" className={CadastroCss.buttonRegistrar}> <i className="far fa-save" />Cadastrar</button>}
+          {bottonAtivo &&  <Link to="/" className={CadastroCss.buttonCancelar}> <i className="far fa-times-circle" />Cancelar</Link>}
           </div>
-          { menssagemRegistro && <div className={CadastroCss.mensagemEspera}> <i class="fas fa-share-square"/><p>Registrando o veículo...</p></div>}
+          { menssagemRegistro && <div className={CadastroCss.mensagemEspera}> <i className="fas fa-share-square"/><p>Registrando o veículo...</p></div>}
         </form>
       </div>
       {mostrarModal && <Modal fecharModal={fecharModal} menssagemModal={menssagemModal} bottonModal={bottonModal} />}

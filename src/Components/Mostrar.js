@@ -122,14 +122,13 @@ const Mostrar = () => {
   return (
     <div className={MostrarCss.preContainer}>
       <div className={MostrarCss.container}>
-
-        <div className={MostrarCss.body}>
-          <div className={MostrarCss.titulo}>{marca} - {modelo}</div>
+        <div className={MostrarCss.conteudo}>
+          <div className={MostrarCss.headerCadastro}>
+              <div className={MostrarCss.titulo}>{marca} - {modelo}</div>
+              <img className={MostrarCss.logo} src={urlFotoPrincipal} alt="logo" />
+            </div>
           <form onSubmit={(event) => event.preventDefault()}>
             <div className={MostrarCss.containerForm}>
-              <div className={MostrarCss.headerCadastro}>
-                <img className={MostrarCss.logo} src={urlFotoPrincipal} alt="logo" />
-              </div>
               <div className="mb-3">
                 <label htmlFor="urlFotoPrincipal" className="form-label">Foto</label>
                 <input type="url" className="form-control" id="urlFotoPrincipal" defaultValue={urlFotoPrincipal} placeholder="https://" required disabled={disabled} onChange={(event) => setCar({ ...car, urlFotoPrincipal: event.target.value })} />
@@ -183,17 +182,16 @@ const Mostrar = () => {
                 <input type="texto" className="form-control" id="cadastradoPor" defaultValue={cadastradoPor} placeholder="" required disabled={disabled} onChange={(event) => setCar({ ...car, cadastradoPor: event.target.value })} />
               </div>
             </div>
-            <hr />
-          </form>
-          <div className={MostrarCss.containerButtons}>
-            {guardar && <button type="submit" className={MostrarCss.buttonRegistrar} onClick={EditarCar}> <i className="fas fa-share-square" />Guardar cambios</button>}
-            {edit && <button className={MostrarCss.buttonRegistrar} onClick={desactBotton}> <i className="fas fa-edit" />Editar</button>}
-            {deletar && <button onClick={() => { deleteCar(id) }} className={MostrarCss.buttonRegistrar}><i className="fas fa-trash-alt" />Deletar</button>}
-            {bottonAtivo && <Link to="/" className={MostrarCss.buttonCancelar} onClick={desactBotton}> <i className="far fa-times-circle" />Cancelar</Link>}
-
-          </div>
-          {menssagemRegistro && <div><p>Modificando o regitro do veículo...</p></div>}
+          </form>  
         </div>
+        <hr />
+        <div className={MostrarCss.containerButtons}>
+          {guardar && <button type="submit" className={MostrarCss.buttonRegistrar} onClick={EditarCar}> <i className="fas fa-share-square" />Guardar cambios</button>}
+          {edit && <button className={MostrarCss.buttonRegistrar} onClick={desactBotton}> <i className="fas fa-edit" />Editar</button>}
+          {deletar && <button onClick={() => { deleteCar(id) }} className={MostrarCss.buttonRegistrar}><i className="fas fa-trash-alt" />Deletar</button>}
+          {bottonAtivo && <Link to="/" className={MostrarCss.buttonCancelar} onClick={desactBotton}> <i className="far fa-times-circle" />Cancelar</Link>}
+        </div>
+        {menssagemRegistro && <div><p>Modificando o regitro do veículo...</p></div>}
       </div>
       { mostrarModal && <Modal fecharModal={fecharModal} menssagemModal={menssagemModal} bottonModal={bottonModal} id={id} />}
     </div>

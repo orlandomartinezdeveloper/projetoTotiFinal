@@ -2,6 +2,10 @@ body{
     font-size: 95.5%;
 }
 
+.preContainer{
+    background: #121111;
+}
+
 .container{
     position: relative;
     display: flex;
@@ -11,6 +15,8 @@ body{
     background: #121111;
     color: #ff6347;
     padding: 5rem 0;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .headerCadastro{
