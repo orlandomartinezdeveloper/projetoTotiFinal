@@ -7,6 +7,7 @@ import Cadastro from './Cadastro';
 import Mostrar from './Mostrar';
 import EditarApagar from './EditarApagar';
 import CarrosTp from './CarrosTp';
+import Carregando from './Carregando';
 
 const AppRouter = () => {
     const [busca, setBusca] = useState('');
@@ -28,7 +29,7 @@ const AppRouter = () => {
                         <EditarApagar />
                     </Route>
                     <Route path='/Main'>
-                        <div>Hola</div>
+                        <Carregando />
                     </Route>
                     <Route exact path='/'>
                         <Header />

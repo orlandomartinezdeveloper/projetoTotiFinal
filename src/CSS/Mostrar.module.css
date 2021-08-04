@@ -2,15 +2,20 @@ body{
     font-size: 95.5%;
 }
 
+.preContainer {
+    background: #121111;
+}
+
 .container{
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: #121111;
     color: tomato;
     padding: 5rem 0;
+    margin: 0 auto;
+    width: 80%;
 }
 
 .headerCadastro{
@@ -18,23 +23,24 @@ body{
     justify-content: center; 
     flex-direction: column;
     align-items: center;
-    padding: 0rem 0 2rem;
+    box-shadow: 1px 1px 15px #000;
 }
 
 .logo{
-    width: 130px;
-    height: 105px;
-    border-radius: 50%;
+    width: 100%;
+ 
+
 }
 
 .titulo{
     font-size: 1.4rem;
     font-weight: 600;
-    padding: 1rem 0 0;
+    padding: 1rem 0;
+    text-align: center;
 }
 
 form{
-    width: 80%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -106,6 +112,10 @@ i{
     margin-right: 0.5rem;
 }
 
+.body {
+    width: 100%;
+}
+
 @media screen and (min-width:900px){
     /* .containerForm{
         width: 80%;
@@ -118,18 +128,28 @@ i{
         font-size: 2rem;
         margin-left: 1rem;
     }
-    .headerCadastro{
-        flex-direction: row;
-    }
+    /*.headerCadastro{
+       width:100%;
+    }*/
+
     .logo{
         width: 130px;
         height: 105px;
         border-radius: 50%;
     }
+   
     .container{
+        width: 80%;
         height: 100vh;
         padding: 2rem 0;
+        flex-direction: row;
     }
+
+    .body {
+        width: 100%;
+    }
+
+
     .containerButtons{
         justify-content:space-between;
         flex-direction: row;

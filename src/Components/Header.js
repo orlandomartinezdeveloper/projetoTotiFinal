@@ -48,8 +48,8 @@ const Header = () => {
         },
         {
             id: 1,
-            name: 'Veículos',
-            src: '/Veiculos',
+            name: 'Novo',
+            src: '/Cadastro',
             logo: 'fas fa-car'
         },
         {

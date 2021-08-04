@@ -23,7 +23,7 @@ const Control = (props) => {
 
                         }
                         aria-label="Recipient's username" aria-describedby="basic-addon2" />
-                    <span className={ControlCSS.lupa}><i className="fa fa-search"></i></span>
+                    <span className={ControlCSS.lupa}><i className={"fa fa-search " + ControlCSS.lupaP}></i></span>
                 </div>
             </div>
         </div>

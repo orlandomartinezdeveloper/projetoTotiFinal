@@ -4,7 +4,7 @@ function Card({ item }) {
     let imagesCar = [];
     imagesCar.push(urlFotoPrincipal);
     return (
-        < div className={CarrosTPCSS.card} >
+        < div className={"animate__animated animate__fadeInUp " + CarrosTPCSS.card} >
             <div className={CarrosTPCSS.containerImg}><img src={imagesCar} alt="Imagem" className={CarrosTPCSS.img} /></div>
             <div className={CarrosTPCSS.dados}>
                 <div className={CarrosTPCSS.marca}>{marca}</div>
