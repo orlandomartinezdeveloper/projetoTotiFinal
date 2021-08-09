@@ -5,7 +5,6 @@ import Main from './Main';
 import Footer from './Footer';
 import Cadastro from './Cadastro';
 import Mostrar from './Mostrar';
-import EditarApagar from './EditarApagar';
 import CarrosTp from './CarrosTp';
 import Carregando from './Carregando';
 
@@ -24,9 +23,6 @@ const AppRouter = () => {
                     </Route>
                     <Route path='/mostrarCar/:id'>
                         <Mostrar />
-                    </Route>
-                    <Route path='/editar'>
-                        <EditarApagar />
                     </Route>
                     <Route path='/Main'>
                         <Carregando />

@@ -11,7 +11,7 @@ function Card({ item }) {
                 <div className={CarrosTPCSS.modelo}>{modelo}</div>
                 <div className={CarrosTPCSS.preco}>R$ {preco}</div>
                 <div className={CarrosTPCSS.modelo}>{cidade}</div>
-                <div className={CarrosTPCSS.preButton}><a href={`/mostrarCar/${_id}`}><button className={CarrosTPCSS.button}><i className="fa fa-eye"></i></button></a></div>
+                <div className={CarrosTPCSS.preButton}><a href={`/mostrarCar/${_id}`}>Ver <i className="fas fa-sign-out-alt"></i></a></div>
             </div>
         </div >
     )
