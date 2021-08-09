@@ -23,13 +23,11 @@ body{
     justify-content: center; 
     flex-direction: column;
     align-items: center;
-    box-shadow: 1px 1px 15px #000;
 }
 
 .logo{
     width: 100%;
- 
-
+    height: 200px;
 }
 
 .titulo{
@@ -135,6 +133,7 @@ i{
     .headerCadastro{
         flex-direction: row;
         margin: 4.5rem 0;
+        box-shadow: 1px 1px 15px #000;
     }
 
     .titulo{
@@ -149,6 +148,7 @@ i{
 
     .logo{
         width: 65%;
+        height: 400px;
         /* height: 105px; */
         /* border-radius: 50%; */
     }

@@ -3,6 +3,7 @@ import MostrarCss from '../CSS/Mostrar.module.css'
 // import logo from '../Img/logo-car-finder.png'
 import { Link, useParams } from 'react-router-dom'
 import Modal from './Modal'
+import AlertDelete from './AlertDelete'
 
 const Mostrar = () => {
   const [car, setCar] = useState({});
@@ -16,7 +17,10 @@ const Mostrar = () => {
   // const [idDelete, setidDelete ] = useState(0)
   const [bottonAtivo, setBottonAtivo] = useState(true)
   const [menssagemRegistro, setMenssagemRegistro] = useState(false)
-
+  const [alertDelete, setAlertDelete] = useState(false)
+  const [voltar, setVoltar] = useState(true)
+  const [desactSi, setDesactSi] = useState(true)
+  const [desactNo, setDesactNo] = useState(false)
   const {
     ano,
     cadastradoPor,
@@ -34,7 +38,9 @@ const Mostrar = () => {
   } = car;
   const { id } = useParams();
   const endPoint = 'https://carfinder-toti.herokuapp.com/cars'
+
   const obtenerCar = () => {
+    setVoltar(true)
     fetch(`${endPoint}/${id}`)
       .then(res => res.json())
       .then(data => {
@@ -45,10 +51,10 @@ const Mostrar = () => {
 
   const EditarCar = () => {
 
-
     if (!urlFotoPrincipal && !cidade && !uf && !contato && !descricao && !contato && !marca && !modelo && !cor && !ano && !combustivel && !transmissao && !preco && !cadastradoPor) {
       return console.error('Campos obrigatórios!')
     }
+    setVoltar(true)
 
     setMenssagemRegistro(true)
     setBottonAtivo(false)
@@ -86,6 +92,9 @@ const Mostrar = () => {
   useEffect(obtenerCar, [id])
 
   const deleteCar = (id) => {
+    setDesactSi(false)
+    setDesactNo(true)
+
     fetch(`${endPoint}/${id}`, {
       method: 'DELETE'
     })
@@ -95,6 +104,7 @@ const Mostrar = () => {
         setMenssagemModal('Veículo apagado satistactoriamente')
         setBottonModal('desactivar este botton')
         setMostrarModal(true)
+        setVoltar(false)
         console.log('deletado con sucesso')
         console.log(data)
       })
@@ -115,9 +125,19 @@ const Mostrar = () => {
 
   }
 
+  const alertPraDeletar = () => {
+    setMenssagemModal('Esta seguro de apagar o registro?')
+    setAlertDelete(true)
+  }
+
   const fecharModal = () => {
     setMostrarModal(false)
+    setAlertDelete(false)
   }
+
+  // const desactivar = () => {
+  //   setVoltar(false)
+  // }
 
   return (
     <div className={MostrarCss.preContainer}>
@@ -188,12 +208,14 @@ const Mostrar = () => {
         <div className={MostrarCss.containerButtons}>
           {guardar && <button type="submit" className={MostrarCss.buttonRegistrar} onClick={EditarCar}> <i className="fas fa-share-square" />Guardar cambios</button>}
           {edit && <button className={MostrarCss.buttonRegistrar} onClick={desactBotton}> <i className="fas fa-edit" />Editar</button>}
-          {deletar && <button onClick={() => { deleteCar(id) }} className={MostrarCss.buttonRegistrar}><i className="fas fa-trash-alt" />Deletar</button>}
+          {/* {deletar && <button onClick={() => { deleteCar(id) }} className={MostrarCss.buttonRegistrar}><i className="fas fa-trash-alt" />Deletar</button>} */}
+          {deletar && <button onClick={ alertPraDeletar } className={MostrarCss.buttonRegistrar}><i className="fas fa-trash-alt" />Deletar</button>}
           {bottonAtivo && <Link to="/" className={MostrarCss.buttonCancelar} onClick={desactBotton}> <i className="far fa-times-circle" />Cancelar</Link>}
         </div>
         {menssagemRegistro && <div><p>Modificando o regitro do veículo...</p></div>}
       </div>
-      { mostrarModal && <Modal fecharModal={fecharModal} menssagemModal={menssagemModal} bottonModal={bottonModal} id={id} />}
+      { alertDelete && <AlertDelete deleteCar={deleteCar} desactSi={desactSi} desactNo={desactNo} fecharModal={fecharModal} menssagemModal={menssagemModal} id={id} />}
+      { mostrarModal && <Modal fecharModal={fecharModal} voltar={voltar} menssagemModal={menssagemModal} bottonModal={bottonModal} id={id} />}
     </div>
   )
 }
