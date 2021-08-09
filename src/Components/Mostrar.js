@@ -109,8 +109,9 @@ const Mostrar = () => {
         console.log(data)
       })
       .catch(function (error) {
-        setMenssagemModal(`Veículo nao Apagado
-             ${error}`)
+        setDesactSi(true)
+        setDesactNo(false)
+        setMenssagemModal(`Veículo não Apagado (${error}). Tentar de novo?`)
         setBottonModal('Tentar novamente')
         setMostrarModal(false)
         console.log(error)
