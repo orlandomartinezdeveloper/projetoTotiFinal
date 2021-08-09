@@ -88,12 +88,26 @@
     justify-content: flex-end;
 }
 
+.preButton a{
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 .button {
     background: rgb(251, 106, 106);
     color: #fff;
     padding: 0.5rem 2rem;
     border: 2px solid rgba(214, 34, 34, 0.87);
     font-weight: 400;
+}
+
+.preButton i{
+    margin-left: 5px;
+    font-size: 1rem;
 }
 
 .button:hover {
