@@ -6,13 +6,14 @@ import Carregando from './Carregando';
 const CarrosTp = (props) => {
 
     const busca = props.busca;
-    console.log('Buscando: <' + busca + '>')
-    const [cars, setCars] = useState([])
-    const [loading, setLoading] = useState(true)
+    const [cars, setCars] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [showEmpty, setShowEmpty] = useState(false);
+    const [showError, setShowError] = useState('');
 
 
     const getCarros = () => {
-        console.log('Espere...')
+        setLoading(true);
         const urlBase = 'https://carfinder-toti.herokuapp.com/cars';
         const endpoint = `${urlBase}?q=${busca}`;
         fetch(endpoint, {
@@ -22,14 +23,14 @@ const CarrosTp = (props) => {
                 return response.json()
             })
             .then(function (data) {
+                setShowError('');
                 setLoading(false)
-                console.log('Pronto!!')
                 setCars(data)
+                if (!data.length) setShowEmpty(true)
             })
             .catch((error) => {
-                return (
-                    <div>Error</div>
-                )
+                setShowError(`${error}`);
+                setLoading(false)
             })
 
     }
@@ -45,10 +46,26 @@ const CarrosTp = (props) => {
 
     const Map = carSlice.map(item => (<Card item={item} key={item._id} />));
 
+    const messageEmpty = (
+        <h1 
+            style={{ textAlign: 'center', padding: "10px" }}>
+                Sua busca não tem coincidências
+        </h1>
+    )
+
+    const messageError = (
+        <h1 
+            style={{ textAlign: 'center', padding: "10px" }}>
+                {showError}
+        </h1>
+    )
+
     return (
 
         <div className={CarrosTPCSS.conteudo}>
             {loading && <Carregando />}
+            {showEmpty && messageEmpty}
+            {showError && messageError}
             <div className={CarrosTPCSS.preCards}>
                 {Map}
             </div>
