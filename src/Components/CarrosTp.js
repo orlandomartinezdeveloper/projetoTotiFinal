@@ -14,6 +14,8 @@ const CarrosTp = (props) => {
 
     const getCarros = () => {
         setLoading(true);
+        setCars([]);
+        setShowEmpty(false);
         const urlBase = 'https://carfinder-toti.herokuapp.com/cars';
         const endpoint = `${urlBase}?q=${busca}`;
         fetch(endpoint, {
@@ -24,13 +26,14 @@ const CarrosTp = (props) => {
             })
             .then(function (data) {
                 setShowError('');
-                setLoading(false)
-                setCars(data)
-                if (!data.length) setShowEmpty(true)
+                setLoading(false);
+                setCars(data);
+                setShowEmpty(!data.length);
             })
             .catch((error) => {
                 setShowError(`${error}`);
-                setLoading(false)
+                setLoading(false);
+                setShowEmpty(false);
             })
 
     }
