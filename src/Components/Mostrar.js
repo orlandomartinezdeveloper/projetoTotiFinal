@@ -81,10 +81,13 @@ const Mostrar = () => {
         console.log(car)
       })
       .catch(error => {
-        setMenssagemModal(`Veículo nao Modificado
-             ${error}`)
+        setMenssagemModal(`Veículo não Modificado (${error})`)
         setBottonModal('Tentar novamente')
-        setMostrarModal(false)
+        setMostrarModal(true)
+        setEdit(true)
+        setDeletar(true)
+        setBottonAtivo(true)
+        setMenssagemRegistro(false)
         console.log(error)
       })
   }
@@ -213,7 +216,7 @@ const Mostrar = () => {
           {deletar && <button onClick={ alertPraDeletar } className={MostrarCss.buttonRegistrar}><i className="fas fa-trash-alt" />Deletar</button>}
           {bottonAtivo && <Link to="/" className={MostrarCss.buttonCancelar} onClick={desactBotton}> <i className="far fa-times-circle" />Cancelar</Link>}
         </div>
-        {menssagemRegistro && <div><p>Modificando o regitro do veículo...</p></div>}
+        {menssagemRegistro && <div><p>Modificando o cadastro do veículo...</p></div>}
       </div>
       { alertDelete && <AlertDelete deleteCar={deleteCar} desactSi={desactSi} desactNo={desactNo} fecharModal={fecharModal} menssagemModal={menssagemModal} id={id} />}
       { mostrarModal && <Modal fecharModal={fecharModal} voltar={voltar} menssagemModal={menssagemModal} bottonModal={bottonModal} id={id} />}
