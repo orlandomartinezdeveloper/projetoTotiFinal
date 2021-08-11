@@ -44,7 +44,6 @@ const Mostrar = () => {
     fetch(`${endPoint}/${id}`)
       .then(res => res.json())
       .then(data => {
-        console.log(data);
         setCar(data);
       })
   }
@@ -78,7 +77,6 @@ const Mostrar = () => {
         setBottonAtivo(true)
         setMenssagemRegistro(false)
         setMostrarModal(true)
-        console.log(car)
       })
       .catch(error => {
         setMenssagemModal(`Veículo não Modificado (${error})`)
@@ -88,7 +86,6 @@ const Mostrar = () => {
         setDeletar(true)
         setBottonAtivo(true)
         setMenssagemRegistro(false)
-        console.log(error)
       })
   }
 
@@ -108,8 +105,6 @@ const Mostrar = () => {
         setBottonModal('desactivar este botton')
         setMostrarModal(true)
         setVoltar(false)
-        console.log('deletado con sucesso')
-        console.log(data)
       })
       .catch(function (error) {
         setDesactSi(true)
@@ -117,7 +112,6 @@ const Mostrar = () => {
         setMenssagemModal(`Veículo não Apagado (${error}). Tentar de novo?`)
         setBottonModal('Tentar novamente')
         setMostrarModal(false)
-        console.log(error)
       });
   }
 
