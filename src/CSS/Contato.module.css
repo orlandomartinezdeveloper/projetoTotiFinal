@@ -16,4 +16,32 @@
     background: rgba(255, 255, 255, 0.418);
     padding: 2rem;
     border-radius: 1rem;
+    width: 300px;
+}
+
+.subtitulo {
+    text-align: center;
+}
+
+.botao {
+    padding: 0.25rem 1rem;
+    border: none;
+    background: #000;
+    border-radius: 10px;
+    color:#fff;
+    width:100%;
+
+}
+
+.botao:hover {
+    background: rgb(189, 7, 7);
+    box-shadow: 0 0 10px rgb(165, 39, 17), 0 0 20px rgb(165, 39, 17), 0 0 30px rgb(165, 39, 17);
+}
+
+@media screen and (min-width:800px) {
+    .formulario {
+        width:500px
+    }
+    
+
 }

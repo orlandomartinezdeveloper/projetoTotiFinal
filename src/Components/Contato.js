@@ -8,11 +8,11 @@ const Contato = () => {
             <div className={ContatoCSS.conteudo}>
                 <h1>Contato</h1>
                 <div className={ContatoCSS.formulario}>
-                    <h3>Formulário de Contato</h3>
-                    <form>
-                        <input type="text" id="name" placeholder="Escreva seu nome" required />
-                        <input type="email" id="email" placeholder="Digite seu email" required />
-                        <button type="reset" id="button">Enviar</button>
+                    <h3 className={ContatoCSS.subtitulo}>Formulário de Contato</h3>
+                    <form action="https://formsubmit.co/omjuniormusic@gmail.com" method="POST">
+                        <input type="text" id="name" name="name" placeholder="Escreva seu nome" className="form-control mb-2" required />
+                        <input type="email" id="email" name="email" placeholder="Digite seu email" className="form-control mb-2" required />
+                        <button type="submit" id="button" className={ContatoCSS.botao}>Enviar</button>
                     </form>
                 </div>
             </div>
