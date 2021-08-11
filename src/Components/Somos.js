@@ -49,8 +49,8 @@ const Somos = () => {
                 <div className={SomosCSS.conteudo}>
                     <h1 className={SomosCSS.titulo}>Somos</h1>
                     <div className={SomosCSS.cards}>
-                        {somos.map((item) => (
-                            < div className={item.entrada + SomosCSS.card} >
+                        {somos.map((item, index) => (
+                            < div className={item.entrada + SomosCSS.card} key={index} >
                                 <div className={SomosCSS.containerFotos}>
                                     <img src={item.foto} alt="Foto dos Programadores" className={SomosCSS.fotos} />
                                 </div>
@@ -59,8 +59,8 @@ const Somos = () => {
                                     <div>{item.titulo}</div>
                                     <div>{item.perfil}</div>
                                     <div className={SomosCSS.redes}>
-                                        <a href={item.linkedin} target="_blank" rel="noreferrer"><i class={"fab fa-linkedin-in " + SomosCSS.links}></i></a>
-                                        <a href={item.github} target="_blank" rel="noreferrer"><i class={"fab fa-github " + SomosCSS.links}></i></a>
+                                        <a href={item.linkedin} target="_blank" rel="noreferrer"><i className={"fab fa-linkedin-in " + SomosCSS.links}></i></a>
+                                        <a href={item.github} target="_blank" rel="noreferrer"><i className={"fab fa-github " + SomosCSS.links}></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -68,28 +68,28 @@ const Somos = () => {
                         ))}
                     </div>
                 </div>
-                <div class={SomosCSS.carro} >
+                <div className={SomosCSS.carro} >
                     <img className={SomosCSS.van} src={carro1} alt="Fusca" />
                     <div className={SomosCSS.caucho}>
-                        <img src={imageRing} alt="" class={SomosCSS.ring} />
+                        <img src={imageRing} alt="" className={SomosCSS.ring} />
                     </div>
                     <div className={SomosCSS.caucho2}>
                         <img src={imageRing} alt="" className={SomosCSS.ring} />
                     </div>
                 </div>
-                <div class={SomosCSS.carro2} >
+                <div className={SomosCSS.carro2} >
                     <img className={SomosCSS.tamMustang} src={mustang} alt="Mustang" />
                     <div className={SomosCSS.cauchoMustang}>
-                        <img src={ringMustang} alt="" class={SomosCSS.ringMustang} />
+                        <img src={ringMustang} alt="" className={SomosCSS.ringMustang} />
                     </div>
                     <div className={SomosCSS.cauchoMustang2}>
                         <img src={ringMustang} alt="" className={SomosCSS.ringMustang} />
                     </div>
                 </div>
-                <div class={SomosCSS.carro3} >
+                <div className={SomosCSS.carro3} >
                     <img className={SomosCSS.tamCarro3} src={carro3} alt="Carro" />
                     <div className={SomosCSS.cauchoCarro3}>
-                        <img src={ringCarro3} alt="" class={SomosCSS.ringCarro3} />
+                        <img src={ringCarro3} alt="" className={SomosCSS.ringCarro3} />
                     </div>
                     <div className={SomosCSS.cauchoCarro32}>
                         <img src={ringCarro3} alt="" className={SomosCSS.ringCarro3} />
