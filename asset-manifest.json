@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/projetoTotiFinal/static/css/main.e599b2fc.chunk.css",
+    "main.js": "/projetoTotiFinal/static/js/main.e231daeb.chunk.js",
+    "main.js.map": "/projetoTotiFinal/static/js/main.e231daeb.chunk.js.map",
+    "runtime-main.js": "/projetoTotiFinal/static/js/runtime-main.adc82348.js",
+    "runtime-main.js.map": "/projetoTotiFinal/static/js/runtime-main.adc82348.js.map",
+    "static/js/2.518978bc.chunk.js": "/projetoTotiFinal/static/js/2.518978bc.chunk.js",
+    "static/js/2.518978bc.chunk.js.map": "/projetoTotiFinal/static/js/2.518978bc.chunk.js.map",
+    "index.html": "/projetoTotiFinal/index.html",
+    "static/css/main.e599b2fc.chunk.css.map": "/projetoTotiFinal/static/css/main.e599b2fc.chunk.css.map",
+    "static/js/2.518978bc.chunk.js.LICENSE.txt": "/projetoTotiFinal/static/js/2.518978bc.chunk.js.LICENSE.txt",
+    "static/media/carro1.5befbb53.png": "/projetoTotiFinal/static/media/carro1.5befbb53.png",
+    "static/media/carro2.399ccd49.png": "/projetoTotiFinal/static/media/carro2.399ccd49.png",
+    "static/media/carro3.6eb8e334.png": "/projetoTotiFinal/static/media/carro3.6eb8e334.png",
+    "static/media/estacionamiento.36022ecd.jpg": "/projetoTotiFinal/static/media/estacionamiento.36022ecd.jpg",
+    "static/media/logo-car-finder.6d4d9041.png": "/projetoTotiFinal/static/media/logo-car-finder.6d4d9041.png",
+    "static/media/mariaFoto.137cfa6b.jpg": "/projetoTotiFinal/static/media/mariaFoto.137cfa6b.jpg",
+    "static/media/mern.a0766af9.png": "/projetoTotiFinal/static/media/mern.a0766af9.png",
+    "static/media/orlandoFoto.5ad38e76.jpg": "/projetoTotiFinal/static/media/orlandoFoto.5ad38e76.jpg",
+    "static/media/pneu.6a916cba.png": "/projetoTotiFinal/static/media/pneu.6a916cba.png",
+    "static/media/ring-3.67a5e0ca.png": "/projetoTotiFinal/static/media/ring-3.67a5e0ca.png",
+    "static/media/ring-mustang.35b3fbbe.png": "/projetoTotiFinal/static/media/ring-mustang.35b3fbbe.png",
+    "static/media/slide-projeto-final-1-b.a086b430.jpg": "/projetoTotiFinal/static/media/slide-projeto-final-1-b.a086b430.jpg",
+    "static/media/slide-projeto-final-1-c.62bff466.jpg": "/projetoTotiFinal/static/media/slide-projeto-final-1-c.62bff466.jpg",
+    "static/media/wallcarros.05636755.jpg": "/projetoTotiFinal/static/media/wallcarros.05636755.jpg",
+    "static/media/yoelvisFoto.d40e460d.jpg": "/projetoTotiFinal/static/media/yoelvisFoto.d40e460d.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.adc82348.js",
+    "static/js/2.518978bc.chunk.js",
+    "static/css/main.e599b2fc.chunk.css",
+    "static/js/main.e231daeb.chunk.js"
+  ]
+}
