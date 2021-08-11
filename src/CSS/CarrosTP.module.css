@@ -100,13 +100,14 @@
 .button {
     background: rgb(251, 106, 106);
     color: #fff;
-    padding: 0.5rem 2rem;
-    border: 2px solid rgba(214, 34, 34, 0.87);
+    padding: 5px 10px;
+    border: 1px solid rgba(214, 34, 34, 0.87);
     font-weight: 400;
 }
 
 .preButton i{
     margin-left: 5px;
+    margin-right: 0;
     font-size: 1rem;
 }
 

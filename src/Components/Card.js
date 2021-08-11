@@ -4,7 +4,7 @@ function Card({ item }) {
     let imagesCar = [];
     imagesCar.push(urlFotoPrincipal);
 
-    const formatMoney = (num)=>{
+    const formatMoney = (num) => {
         const number = new Intl.NumberFormat("pt-br").format(num)
         return number
     }
@@ -16,7 +16,7 @@ function Card({ item }) {
                 <div className={CarrosTPCSS.modelo}>{modelo}</div>
                 <div className={CarrosTPCSS.preco}>R$ {formatMoney(preco)}</div>
                 <div className={CarrosTPCSS.modelo}>{cidade}</div>
-                <div className={CarrosTPCSS.preButton}><a href={`/mostrarCar/${_id}`}>Ver <i className="fas fa-sign-out-alt"></i></a></div>
+                <div className={CarrosTPCSS.preButton}><a href={`/mostrarCar/${_id}`} className={CarrosTPCSS.button}>Ver <i className="fas fa-sign-out-alt"></i></a></div>
             </div>
         </div >
     )
