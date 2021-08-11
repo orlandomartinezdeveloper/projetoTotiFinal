@@ -6,7 +6,6 @@ function Card({ item }) {
 
     const formatMoney = (num)=>{
         const number = new Intl.NumberFormat("pt-br").format(num)
-        console.log(number)
         return number
     }
     return (

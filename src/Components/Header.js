@@ -15,6 +15,12 @@ const Header = () => {
             setTelaLetras('letrasApagadas');
             setTelaAzul('telaFechada');
         }
+        return () => {
+            setTela(false);
+            setTelaAzul('telaFechada');
+            setTelaLetras('letrasApagadas');
+            setResolucion(window.innerWidth);
+        };
     }, [resolucion])
     const Cambio = () => {
         setResolucion(window.innerWidth);
