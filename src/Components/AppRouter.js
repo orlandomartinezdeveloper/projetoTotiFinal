@@ -8,6 +8,7 @@ import Mostrar from './Mostrar';
 import CarrosTp from './CarrosTp';
 import Carregando from './Carregando';
 import Somos from './Somos';
+import Contato from './Contato';
 
 const AppRouter = () => {
     const [busca, setBusca] = useState('');
@@ -24,6 +25,10 @@ const AppRouter = () => {
                     </Route>
                     <Route path='/mostrarCar/:id'>
                         <Mostrar />
+                    </Route>
+                    <Route path='/Contato'>
+                        <Header />
+                        <Contato />
                     </Route>
                     <Route path='/Main'>
                         <Carregando />

@@ -1,0 +1,19 @@
+.containerFluid {
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.conteudo {
+    padding-top:150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario {
+    background: rgba(255, 255, 255, 0.418);
+    padding: 2rem;
+    border-radius: 1rem;
+}
