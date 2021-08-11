@@ -34,8 +34,10 @@ const CarrosTp = (props) => {
                 setShowError(`${error}`);
                 setLoading(false);
                 setShowEmpty(false);
-            })
-
+            });
+        return () => {
+            setCars([]);
+        };
     }
     useEffect(getCarros, [busca]);
     const [pageNumber, setPageNumber] = useState(0);
