@@ -22,6 +22,7 @@ const Cadastro = () => {
   const [bottonModal, setBottonModal] = useState('')
   const [bottonAtivo, setBottonAtivo] = useState(true)
   const [menssagemRegistro, setMenssagemRegistro] = useState(false)
+  const [voltar, setVoltar] = useState(true)
 
   const limpiarCampos = () => {
     setUrlFotoPrincipal("")
@@ -48,6 +49,7 @@ const Cadastro = () => {
 
     setBottonAtivo(false)
     setMenssagemRegistro(true)
+    setVoltar(true)
 
     const data = {
       urlFotoPrincipal,
@@ -171,7 +173,7 @@ const Cadastro = () => {
           { menssagemRegistro && <div className={CadastroCss.mensagemEspera}> <i className="fas fa-share-square"/><p>Registrando o veículo...</p></div>}
         </form>
       </div>
-      {mostrarModal && <Modal fecharModal={fecharModal} menssagemModal={menssagemModal} bottonModal={bottonModal} />}
+      {mostrarModal && <Modal fecharModal={fecharModal} voltar={voltar} menssagemModal={menssagemModal} bottonModal={bottonModal} />}
     </div>
   )
 }
