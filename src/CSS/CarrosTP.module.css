@@ -48,9 +48,8 @@
     height: 50%;
     background: #4534;
     overflow: hidden;
-
-
 }
+
 .containerImg:hover {
     opacity:0.5;
 }
@@ -173,5 +172,6 @@
     
     .card {
         margin: 1rem;
+        width:300px;
     }
 }
