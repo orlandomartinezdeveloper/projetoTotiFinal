@@ -16,7 +16,7 @@ const CarrosTp = (props) => {
         setLoading(true);
         setCars([]);
         setShowEmpty(false);
-        const urlBase = 'https://carfinder-toti.herokuapp.com/cars';
+        const urlBase = 'https://car-finder.onrender.com/cars';
         const endpoint = `${urlBase}?q=${busca}`;
         fetch(endpoint, {
             method: 'GET'
