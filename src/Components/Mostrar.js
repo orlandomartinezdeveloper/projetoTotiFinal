@@ -37,7 +37,7 @@ const Mostrar = () => {
     urlFotoPrincipal
   } = car;
   const { id } = useParams();
-  const endPoint = 'https://carfinder-toti.herokuapp.com/cars'
+  const endPoint = 'https://car-finder.onrender.com/cars'
 
   const obtenerCar = () => {
     setVoltar(true)
